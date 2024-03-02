@@ -28,7 +28,7 @@ POMDP type for the Tag POMDP.
 - `transition_option::Symbol`: option for the transition function
 """
 struct TagPOMDP <: POMDP{TagState, Int, Int}
-    mg::MetaDiGraph
+    mg::MetaDiGraph{Int64, Float64}
     dist_matrix::Matrix{Float64}
     tag_reward::Float64
     tag_penalty::Float64

@@ -1,4 +1,4 @@
-POMDPs.observations(pomdp::TagPOMDP) = 1:(get_prop(pomdp.mg, :num_grid_pos) + 1)
+POMDPs.observations(pomdp::TagPOMDP) = 1:(get_prop(pomdp.mg, :num_grid_pos)::Int + 1)
 POMDPs.obsindex(pomdp::TagPOMDP, o::Int) = o
 
 function POMDPs.observation(pomdp::TagPOMDP, a::Int, sp::TagState)
