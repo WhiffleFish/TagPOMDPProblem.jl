@@ -176,7 +176,7 @@ the node index of the valid action.
 function move_direction(pomdp::TagPOMDP, v::Int, a::Int)
     neighs = neighbors(pomdp.mg, v)
     for n_i in neighs
-        if ACTIONS_DICT[get_prop(pomdp.mg, v, n_i, :action)] == a
+        if ACTIONS_DICT[get_prop(pomdp.mg, v, n_i, :action)::Symbol] == a
             return n_i
         end
     end
